@@ -1,6 +1,5 @@
 class Solution {
-    public int search(int[] nums, int target) {
-       
+    public int search(int[] nums, int target) {      
          int low=0;
         int l=nums.length-1;
         int high=l;
@@ -28,7 +27,6 @@ class Solution {
                  }
 
                  if(nums[mid]==target){
-                     System.out.println("yes="+mid);
                     result=mid;
                     break;
                  }
@@ -47,17 +45,14 @@ class Solution {
             int m=dl<dr?0:1;
              
             if(m==0){
-                System.out.println("left");
            
                 high=mid-1;
             }
             else{
-                System.out.println("right");
+             
                       low=mid+1;  
             }
-        
-           System.out.println("low="+low);
-                System.out.println("high="+high);
+    
                 if(high==low)
                 {
                     if(nums[low]==target){
@@ -68,10 +63,8 @@ class Solution {
                         result=-1;
                         break;
                     }
-                }
-                
+                }              
         }
-
     if(result!=-1 && nums[result]==target)
         return result;
         return -1;
