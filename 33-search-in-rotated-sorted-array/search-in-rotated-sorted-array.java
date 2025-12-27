@@ -3,7 +3,6 @@ class Solution {
          int low=0;
         int l=nums.length-1;
         int high=l;
-        System.out.println(high);
         int x=0,y=0;
         int result=0;
         while(low<high)
@@ -40,12 +39,8 @@ class Solution {
       if(Math.abs(nums[y]-target) < Math.abs(nums[high]-target))
                    dr=Math.abs(nums[y]-target);
             else
-               dr=Math.abs(nums[high]-target);
-                   
-            int m=dl<dr?0:1;
-             
-            if(m==0){
-           
+               dr=Math.abs(nums[high]-target);            
+            if(dl<dr){
                 high=mid-1;
             }
             else{
