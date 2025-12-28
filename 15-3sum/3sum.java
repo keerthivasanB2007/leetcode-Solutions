@@ -1,7 +1,6 @@
 class Solution {
-    int binarysearch(int []nums,int key,int i,int j){
-        int left=j+1;
-        int right=nums.length-1;
+    int binarysearch(int []nums,int key,int left,int right){
+       
 
         while(left<=right){
          int mid=(left+right)/2;
@@ -21,11 +20,7 @@ class Solution {
         List<List<Integer>> r=new ArrayList<>();
          int sum=0;
          Arrays.sort(nums);
-           for(int i=0;i<nums.length;i++)
-          System.out.print(nums[i]+",");
      List<String> c=new ArrayList<>();
-    
-    
         for(int i=0;i<nums.length -1;i++)
         {
             if (i > 0 && nums[i] == nums[i - 1]) 
@@ -37,7 +32,7 @@ class Solution {
                sum=nums[i]+nums[j];
                sum=-sum;
               
-               int k=binarysearch(nums,sum,i,j);
+               int k=binarysearch(nums,sum,j+1,nums.length-1);
             
                if(k!=-1 && i!=j && i!=k && j!=k && (nums[i]+nums[j]+nums[k])==0){
                        String t="";
