@@ -1,6 +1,6 @@
 class Solution {
     public boolean isHappy(int n) {
-         List<Integer> r=new ArrayList<>();
+         Set<Integer> r=new HashSet<>();
      int sum=0;
           while(sum!=1){
            sum=0;
