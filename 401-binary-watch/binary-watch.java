@@ -9,26 +9,50 @@ class Solution {
         return r;
     Map<Integer, List<String>> minuteMap = new HashMap<>();
 
-for (int m = 0; m <= 59; m++) {
+minuteMap.put(0, Arrays.asList("00"));
 
-    int bits = Integer.bitCount(m);
+minuteMap.put(1, Arrays.asList(
+        "01", "02", "04", "08", "16", "32"
+));
 
-    minuteMap.putIfAbsent(bits, new ArrayList<>());
+minuteMap.put(2, Arrays.asList(
+        "03", "05", "06", "09", "10", "12",
+        "17", "18", "20", "24",
+        "33", "34", "36", "40", "48"
+));
 
-    // format minute to 2 digits
-    String minute = String.format("%02d", m);
+minuteMap.put(3, Arrays.asList(
+        "07", "11", "13", "14", "19", "21", "22", "25", "26", "28",
+        "35", "37", "38", "41", "42", "44",
+        "49", "50", "52", "56"
+));
 
-    minuteMap.get(bits).add(minute);
-}
+minuteMap.put(4, Arrays.asList(
+        "15", "23", "27", "29", "30", "39",
+        "43", "45", "46", "51", "53", "54",
+        "57", "58"
+));
+
+minuteMap.put(5, Arrays.asList(
+        "31", "47", "55", "59"
+));
 Map<Integer, List<Integer>> hourMap = new HashMap<>();
 
-for (int h = 0; h <= 11; h++) {
+hourMap.put(0, Arrays.asList(
+        0
+));
 
-    int bits = Integer.bitCount(h);
+hourMap.put(1, Arrays.asList(
+        1, 2, 4, 8
+));
 
-    hourMap.putIfAbsent(bits, new ArrayList<>());
-    hourMap.get(bits).add(h);
-}
+hourMap.put(2, Arrays.asList(
+        3, 5, 6, 9, 10
+));
+
+hourMap.put(3, Arrays.asList(
+        7, 11
+));
       for(int i=0;i<=n;i++){
         if(i>=4 )
            break;
