@@ -23,25 +23,27 @@ class Solution {
          int j=s.length()-1;
         
        while(i<j){
-         boolean notchange=true;
+        // boolean notchange=true;
          char c=s.charAt(i);
          char x=s.charAt(j);
         if(!(((c>='a' && c<='z') || (c<='Z' && c>='A')) || (c>='0' && c<='9'))){
                i++;
-               notchange=false;
+               continue;
+              // notchange=false;
         }
         if(!(((x>='a' && x<='z') || (x<='Z' && x>='A')) || (x>='0' && x<='9'))){
             j--;
-            notchange=false;
+            continue;
+          //  notchange=false;
         }
 
-        if( notchange && !(Character.toString(x).equalsIgnoreCase(Character.toString(c)))){
+        if(  (Character.toLowerCase(x)!=Character.toLowerCase(c))){
             return false;
         }
-        if(notchange){
+        
             i++;
             j--;
-        }
+        
        }
        return true;
         }
