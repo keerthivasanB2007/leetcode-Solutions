@@ -80,6 +80,7 @@ class Solution {
          r.next=new ListNode(y);
          r=r.next;
        }
+       x.clear();
         return r1.next;
     }
 }
