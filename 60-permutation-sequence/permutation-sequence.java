@@ -17,7 +17,7 @@ class Solution {
                 c[j+1]=1;
                 String b=l+(j+1); 
                 if(m>q)
-                   break;
+                   return;
                 per(c,b);
             }
         }
