@@ -5,7 +5,8 @@ class Solution {
   String r="";
   int m=1;
    void per(int[] i,String l){
-     
+        if(m>q)
+          return;
         if(l.length() == (i.length-1)  )
         {
           
