@@ -14,7 +14,7 @@ class Solution {
             }
             
         }
-        System.out.println("j="+j);
+       
         Set<Character> v=new HashSet<>(m.keySet());
         int mi=s.length()+1;
        for(Character g:v){
