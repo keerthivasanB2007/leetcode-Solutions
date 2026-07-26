@@ -25,9 +25,9 @@ class Solution {
         invert(root.right);
     }
     public TreeNode invertTree(TreeNode root) {
-        if(root==null){
-            return null;
-        }
+        // if(root==null){
+        //     return null;
+        // }
         invert(root);
         return root;
     }
