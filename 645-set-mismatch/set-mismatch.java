@@ -23,8 +23,7 @@ class Solution {
                 break;
             }
        }
-       System.out.println(Arrays.toString(temp));
-       System.out.println(x+","+count);
+      
        int[] result={x,count};
        return result;
     }
