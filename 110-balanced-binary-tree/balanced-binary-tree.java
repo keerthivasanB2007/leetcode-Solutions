@@ -23,15 +23,15 @@ class Solution {
        
         int r=findHeight(root.right);
  
-        if((Math.abs(l-r)<=1 ) && result){
-           result=true;
-          
+        if((Math.abs(l-r)>1 )){
+           result=false;
+           return 0;
         }
-        else
-        {
-            result=false;
+        // else
+        // {
+        //     result=false;
         
-        }
+        // }
         
         return 1+Math.max(l,r);
 
