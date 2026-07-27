@@ -27,7 +27,7 @@ class BSTIterator {
     public BSTIterator(TreeNode root) {
         l.add(Integer.MIN_VALUE);
         inOrder(root);
-        System.out.println(l);
+      
     }
     
     public int next() {
@@ -39,7 +39,7 @@ class BSTIterator {
     public boolean hasNext() {
         if( (pointer)<(l.size()) ){
 
-         System.out.println(pointer);
+
             return true;
         }
         else{
