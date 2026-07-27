@@ -19,11 +19,11 @@ class Solution {
                 if(root == null)
                    return;
                 if(map.containsKey(d)){
-                  //  System.out.println("old: "+root.val);
+                  
                    map.get(d).add(root.val);
                 }
                 else{
-                  //   System.out.println("new: "+root.val);
+                 
                   List<Integer> temp = new ArrayList<>();
                   temp.add(root.val);
                     map.put(d,temp);
@@ -35,7 +35,7 @@ class Solution {
         if(root == null)
           return new ArrayList<>();
         find(root,0);
-        System.out.println(map);
+     
         List<List<Integer>> result = new ArrayList<>(map.values());
 
         return result; 
