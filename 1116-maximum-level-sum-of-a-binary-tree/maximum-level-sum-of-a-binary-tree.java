@@ -35,7 +35,7 @@ class Solution {
         fun(root,1);
          int max =Integer.MIN_VALUE;
          int index=0;
-         System.out.println(map);
+       
         for(int i=1;i<=map.size();i++){
             if(max < map.get(i)){
                 max=map.get(i);
