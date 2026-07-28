@@ -20,9 +20,7 @@ class Solution {
             
             String left = printString(root.left);
             String right = printString(root.right);
-            System.out.println("root : "+root.val);
-            System.out.println("left : "+left);
-            System.out.println("right : "+right);
+            
             if(left.length()==0 && right.length()==0)
                 return root.val+"";
             else if(left.length()==0 && right.length()!=0)
@@ -31,7 +29,7 @@ class Solution {
                 return root.val + "(" + left+ ")" + "(" + right + ")";
             else
                 return root.val +"(" +left +")";
-          //  return root.val + "(" + printString(root.left) + ")" + "(" + printString(root.right) + ")";
+        
     }
     public String tree2str(TreeNode root) {
         String result = printString(root);
