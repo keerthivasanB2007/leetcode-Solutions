@@ -58,7 +58,11 @@ class Solution {
            
             int real = (a*x - b*y);
             int img = (a*y + b*x);
-
-            return real + "+" + img + "i" ;
+            StringBuilder result = new StringBuilder();
+            result.append(real);
+            result.append("+");
+            result.append(img);
+            result.append("i");
+            return result.toString() ;
     }
 }
