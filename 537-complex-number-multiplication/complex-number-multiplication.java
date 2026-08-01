@@ -31,10 +31,10 @@ class Solution {
 
          int c = midSign[--x] + 1;
          int sign = 1;
-         if(n.charAt(c)=='-'){
-            sign = -1;
-            c++;
-         }
+        //  if(n.charAt(c)=='-'){
+        //     sign = -1;
+        //     c++;
+        //  }
          int start =c;
          while(c<n.length()){
             if(n.charAt(c)=='i')
