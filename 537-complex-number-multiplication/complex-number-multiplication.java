@@ -4,14 +4,14 @@ class Solution {
     int getReal(String n){
         int sign = 1;
         int i=0;
-        if(n.charAt(0)=='+'){
-          sign=+1;
-            i++;
-        }
-        if(n.charAt(0)=='-'){
-          sign=-1;
-          i++;
-        }
+        // if(n.charAt(0)=='+'){
+        //   sign=+1;
+        //     i++;
+        // }
+        // if(n.charAt(0)=='-'){
+        //   sign=-1;
+        //   i++;
+        // }
         
         while(i<n.length()){
             if(n.charAt(i)=='+')
@@ -23,7 +23,7 @@ class Solution {
         midSign[x++]=i;
         String s = n.substring(0,i);
         int r = Integer.parseInt(s);
-        System.out.println("r="+r + "  sign = "+sign);
+     
         return r;
     }
     int getImg(String n)
@@ -50,13 +50,11 @@ class Solution {
     public String complexNumberMultiply(String num1, String num2) {
             int a = getReal(num1);   
             int x = getReal(num2);
-            System.out.println("a="+a);
-            System.out.println("x="+(x));
+        
 
              int y = getImg(num2);
             int b = getImg(num1);
-            System.out.println("b="+b);
-            System.out.println("y="+y);
+            
            
             int real = (a*x - b*y);
             int img = (a*y + b*x);
