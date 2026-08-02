@@ -12,10 +12,11 @@ class Solution {
             return dp[l][r]=Math.max(left,right);
     }
     public boolean stoneGame(int[] piles) {
-        int n =  piles.length;
-        dp = new Integer[n][n];
-        int r = solve(0,n-1,piles);
+        // int n =  piles.length;
+        // dp = new Integer[n][n];
+        // int r = solve(0,n-1,piles);
         
-        return r>0?true:false;
+        // return r>0?true:false;
+        return true;
     }
 }
