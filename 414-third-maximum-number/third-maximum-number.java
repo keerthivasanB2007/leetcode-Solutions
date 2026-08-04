@@ -21,24 +21,11 @@ class Solution {
         TreeSet<Integer> s = new TreeSet<>();
         for(int i:nums){
             s.add(i);
+            if(s.size()>3){
+                s.pollFirst();
+            }
         }
        
-        Iterator<Integer> i = s.descendingIterator();
-        int c = 3;
-        Integer r = null;
-        while(c!=0){
-            if(i.hasNext())
-                r=i.next();
-            else
-               {
-                r=null;
-                break;
-               }
-               c--;
-
-        }
-        if(r==null)
-          return s.last();
-        return r;
+        return s.size()==3?s.pollFirst():s.pollLast();
     }
 }
