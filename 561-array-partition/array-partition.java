@@ -6,7 +6,7 @@ class Solution {
         int sum = 0;
 
         while(j<nums.length){
-            System.out.println("i= "+nums[i]+" j="+nums[j]);
+            
             sum = sum + Math.min(nums[i],nums[j]);
             j=j+2;
             i=i+2;
