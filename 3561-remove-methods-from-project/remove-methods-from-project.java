@@ -24,9 +24,11 @@ class Solution {
     }
     public List<Integer> remainingMethods(int n, int k, int[][] invocations) {
             HashMap<Integer,List<Integer>> graph = new HashMap<>();
+              List<Integer> result1 = new ArrayList<>();
             for(int i=0;i<n;i++){
                     List<Integer> t = new ArrayList<>();
                     graph.put(i,t);
+                    result1.add(i);
             }
 
             for(int i=0;i<invocations.length;i++){
@@ -49,20 +51,12 @@ class Solution {
                 boolean touch = false;
                 for(int j=0;j<neighbors.size();j++){
                         if(bug.contains(neighbors.get(j))){
-                            touch=true;
-                            break;
+                            return result1;
                         }
                 }
-                if(touch){
-                    List<Integer> result1 = new ArrayList<>();
-                     for(int x=0;x<n;x++)
-                         result1.add(x);
-                        return result1;
-        
-                }
-                else{
+                
                     result.add(i);
-                }
+            
 
             }
             
