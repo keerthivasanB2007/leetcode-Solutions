@@ -35,13 +35,12 @@ class Solution {
                   l.add(invocations[i][1]);
                   graph.put(key,l);
             }
-            // System.out.println(graph);
-          //  boolean[] visited = new boolean[n];
+       
             Set<Integer> visited = new HashSet<>();
             dfs(graph,visited,k);
             if(visited.size()==n)
                 return new ArrayList<>();
-            // System.out.println(Arrays.toString(visited));
+           
             List<Integer> result = new ArrayList<>();
             for(int i=0;i<n;i++){
                 if(bug.contains(i))
@@ -59,20 +58,15 @@ class Solution {
                      for(int x=0;x<n;x++)
                          result1.add(x);
                         return result1;
-                    
-                   // result.add(i);
+        
                 }
                 else{
                     result.add(i);
                 }
 
             }
-            System.out.println("visited : "+visited);
-        
-        // if(result.size()==0){
-           
-        // }
-           
+            
+      
             return result;
 
     }
