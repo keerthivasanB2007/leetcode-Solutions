@@ -10,9 +10,9 @@ class Solution {
                     visited.add(currentNode);
                      bug.add(currentNode);
 
-                    List<Integer> neighbors = graph.getOrDefault(currentNode,new ArrayList<>());
-                    for(int i=0;i<neighbors.size();i++){
-                         int neighbor = neighbors.get(i);
+                    List<Integer> neighbors = graph.get(currentNode);
+                    for(int neighbor : neighbors){
+                        
                        if(!visited.contains(neighbor)){
     
                             s.push(neighbor);
@@ -24,7 +24,7 @@ class Solution {
     }
     public List<Integer> remainingMethods(int n, int k, int[][] invocations) {
             HashMap<Integer,List<Integer>> graph = new HashMap<>();
-              List<Integer> result1 = new ArrayList<>();
+              List<Integer> result1 = new ArrayList<>(n);
             for(int i=0;i<n;i++){
                     List<Integer> t = new ArrayList<>();
                     graph.put(i,t);
@@ -33,9 +33,8 @@ class Solution {
 
             for(int i=0;i<invocations.length;i++){
                     int key = invocations[i][0];
-                  List<Integer> l =graph.get(key);
-                  l.add(invocations[i][1]);
-                  graph.put(key,l);
+                
+                  graph.get(key).add(invocations[i][1]);
             }
        
             Set<Integer> visited = new HashSet<>();
@@ -47,17 +46,15 @@ class Solution {
             for(int i=0;i<n;i++){
                 if(bug.contains(i))
                   continue;
-                List<Integer> neighbors = graph.getOrDefault(i,new ArrayList<>());
+                List<Integer> neighbors = graph.get(i);
                 boolean touch = false;
                 for(int j=0;j<neighbors.size();j++){
                         if(bug.contains(neighbors.get(j))){
                             return result1;
                         }
-                }
-                
-                    result.add(i);
+                }   
+                result.add(i);
             
-
             }
             
       
