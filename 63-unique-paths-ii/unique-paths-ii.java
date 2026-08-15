@@ -7,12 +7,9 @@ class Solution {
         
         if(i>=M || j>=N)
           return 0;
-        if(i==(M-1) && j==(N-1)){
-           if(x[i][j]!=1)
+        if(i==(M-1) && j==(N-1))
            return 1;
-           else
-            return 0;
-        }
+          
         if(mat[i][j]!=0)
            return mat[i][j];
         int down =0;
