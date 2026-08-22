@@ -9,8 +9,7 @@ class Solution {
             product = product*digit;
             n = n/10;
         }
-        System.out.println("sum="+sum);
-        System.out.println("Product="+product);
+
         if( temp%(sum + product)==0)
            return true;
         return false;
